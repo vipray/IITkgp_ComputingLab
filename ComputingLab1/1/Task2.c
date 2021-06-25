@@ -81,9 +81,14 @@ int isMatchingWithOtherPath(struct HashTable* ht, int hashVal, int paths[][1001]
                 break;
             }
         }
-        if(!f && tmp->pathnoOfLastMatchedPath!=pathno){
-            tmp->matchCount += 1; //matchCount has increased
-            tmp->pathnoOfLastMatchedPath = pathno;
+        if(!f){
+            if(pathno==0){
+                return 1;
+            }
+            if(tmp->pathnoOfLastMatchedPath!=pathno){
+                tmp->matchCount += 1; //matchCount has increased
+                tmp->pathnoOfLastMatchedPath = pathno;
+            }
             return tmp->matchCount;   //match, send matchCount
         }
 
@@ -143,7 +148,7 @@ int calculateRollingHashAtOnce(struct HashTable* ht, int paths[][1001], int path
     int f=0;
     // hash for very first substring
     for (int i=0; i<subLen; i++) { 
-        hashVal = ((hashVal* d)% p+ (paths[pathno][i]*d) % p)% p; 
+        hashVal = (((hashVal* d)%p)+ ((paths[pathno][i]*d) % p))% p;
         dPowI = (dPowI*d)%p;
     }
 
@@ -152,7 +157,7 @@ int calculateRollingHashAtOnce(struct HashTable* ht, int paths[][1001], int path
         if(i != -1){
             //hash using rollingHash algo
             // here we are removing the ith letter and adding the (subLen+i)th letter
-            hashVal = ( (d*(hashVal - paths[pathno][i]*dPowI)) + (d*paths[pathno][subLen+i]) )% p; 
+            hashVal = ( ((d*(hashVal - paths[pathno][i]*dPowI + p*dPowI))%p) + (d*paths[pathno][subLen+i]) )% p;
             //if goes negative
             if(hashVal<0){
                 hashVal+=p;
@@ -292,6 +297,8 @@ int main(int argc, char** argv){
     //to store the endpoints of the maximal Common SubPath
     struct Node* tmpNode = (struct Node*)(malloc(sizeof(struct Node)));
     tmpNode->next = NULL;
+    tmpNode->sId = 0;	
+    tmpNode->eId = -1;
 
     //All l length substring check using Binary Search
     while (low <= high) {
