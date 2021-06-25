@@ -20,7 +20,7 @@ Task :           1
 */
 void maximalCommonSubpath(int path1[], int path2[], int path1Len, int path2Len){
     int dp[path1Len+1][path2Len+1];
-    
+    /*
     for(int i=0;i<path1Len;i++){
         dp[i][0]=0;
     }
@@ -28,7 +28,7 @@ void maximalCommonSubpath(int path1[], int path2[], int path1Len, int path2Len){
     for(int i=0;i<path2Len;i++){
         dp[0][i]=0;
     }
-
+    */
     int maximalLen=0;
     int lastRow=0,lastCol=0;
 
