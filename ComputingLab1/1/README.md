@@ -10,8 +10,7 @@
     * Files : Task1.c (Code) | task1_tc1.txt (TestCase)
 
 ##### Task2:
-    * Given two such paths. Find the longest common sub-path between them USING Rabin
-and Karp algorithm with Rolling Hashing.
+    * Given two such paths. Find the longest common sub-path between them USING Rabin and Karp algorithm with Rolling Hashing.
     * Approach:
         1.  Find Smallest path len (smallestPathLen)
         2.  As we need to find the longest Common subpath, we have to check for all length from
