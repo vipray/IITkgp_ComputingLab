@@ -30,3 +30,7 @@
                     So take a senario, we are checking for 3rd path and we found a match in the hash table
                     but suppose if that subPath (in hash table) didn't get matched with any subPath of 2nd path, then this match is useless.
     * Files : Task2.c (Code) | task2_tc1.txt (TestCase)
+
+##### Task3:
+    * Given 'K' such paths. Find the longest common sub-path among them USING Rabin and Karp algorithm with Rolling Hashing.
+    * Files : Task3.c (Code) | task3_tc200.txt (TestCase)
