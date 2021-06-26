@@ -14,6 +14,7 @@
     <user id 1>: <list of contents posted by user 1>
     to
     <user id n>: <list of contents posted by user n>
+    ![Snap](screens/graphExample.png)
 
 
 ##### Task1:
