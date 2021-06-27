@@ -35,3 +35,15 @@
                 (As 'ui' is at distance of '1' from 'ci' and (up,up+1...uq) are atmost 'k-1' distance from 'ui'. This (up,up+1...uq) are  atmost 'k' distance from 'ci'. And that's what we need)
             
     * Files : Task2.c (Code) | task2_input1.txt (TestCase)
+
+##### Task3:
+    * Given 'userID' and varaible 'K'. Find first k recommended contents in increasing order of their distances from user 'userID' such that none of the recommended content is itself shared by 'userID'.
+    * In addition to task1, here links between user and content have one more property called visibility(Public, friends, friends of friends)
+    * If a content is "Public" visible then its distance from any user will be considered as 1.
+    * If content is "Only Firends" visible then its distance from any user will be considered as  actalDistance - 1.
+    * If content is "Firend of Firends" visible then its distance from any user will be considered as  actalDistance - 2.
+    * It is obvious that distance cant be zero, so for example, if content is at distance 2 from me but its publisher user published it with "Firend of Firends" visiblility then its distance from me will be 1 (NOT 0). So just keep it simple that distance cant be less than 1.
+    
+    * Approach: 
+        * Use Dijkastra (or BFS)
+    * Files : Task3.c (Code) | task3_sample.txt (TestCase)
