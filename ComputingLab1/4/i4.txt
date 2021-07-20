@@ -1,0 +1,38 @@
+reserve A B 22 M 0 AC2
+reserve B B 2 F 0 AC2
+reserve C B 37 M 0 AC2
+reserve D B 22 M 0 AC2
+reserve E B 2 F 0 AC2
+reserve F B 37 M 0 AC2
+reserve G A 22 M 0 AC2
+reserve H C 2 F 0 AC2
+reserve I D 37 M 0 AC2
+reserve A E 22 M 0 AC2
+reserve B F 2 F 0 AC2
+reserve C G 37 M 0 AC2
+reserve D F 22 M 0 AC2
+reserve E F 2 F 0 AC2
+reserve F S 37 M 0 AC2
+reserve G S 22 M 0 AC2
+cancel 230
+cancel 240
+cancel 250
+cancel 260
+cancel 130
+cancel 140
+cancel 150
+cancel 160
+cancel 190
+cancel 200
+cancel 210
+cancel 130
+cancel 140
+cancel 150
+cancel 160
+cancel 30
+cancel 40
+cancel 50
+cancel 60
+cancel 90
+cancel 100
+cancel 110
