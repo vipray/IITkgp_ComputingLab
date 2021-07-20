@@ -15,4 +15,4 @@
     *   Finally Leader ask every other Agent to gets terminated. Before termination each Agents announces its termination. Also every parent wait for all of its child to terminate first.
     *   Approach:
             *   Use well define algorithm to find out the leader.
-    *   Files : Task123.c (Code) | A5_input.txt (TestCase)
+    *   Files : T123.c (Code) | A3_input.txt (TestCase)
