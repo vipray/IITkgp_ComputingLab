@@ -1,8 +1,7 @@
 /*
-    Name : Vipray Jain 
-    Roll : 20CS60R37
+    Name : Vipray Jain
     Assignment No: 7
-    Implementation Type : 3
+    Implementation Type : 4
 */
 
 #include <pthread.h>
@@ -298,7 +297,7 @@ int main(int argc, char *argv[])
     int p=0;
     producer((void *)&p);
 
-    
+
 	for (int i = 0; i < NUMTHRDS; ++i){        
 		pthread_join(threads[i],NULL);
 	}
