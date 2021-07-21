@@ -31,7 +31,7 @@
         *   This fact might let the code go into deadlock. 
         *   So, It is better to make sure( may be using 'sleep()') that there should be some thread waiting for the signal, otherwise your signal get wasted.
 
-##### Imp3:
+##### Imp4:
     *   Same as Imp3 but as producer consumer problem.
     *   Create threads pool having threads equall to the cores in your system.
     *   Create a buffer array to keep the ids corresponding to the elements of Mtatrix C's indices.
