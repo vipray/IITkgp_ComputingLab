@@ -42,3 +42,5 @@
 
     *   Files : Imp4.c (Code) | input.txt, input1.txt, input2.txt, input3.txt (TestCase)
 
+##### Helping Hand: 
+https://hpc-tutorials.llnl.gov/posix/
